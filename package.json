@@ -1,11 +1,12 @@
 {
-    "name": "quran-recitation",
+    "name": "quran-playlist",
     "displayName": "Quran Recitation Player",
     "description": "Play Quran recitations in VS Code",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "publisher": "fdciabdul",
+    "icon": "media/icon.png",
     "engines": {
-        "vscode": "^1.66.0"
+        "vscode": "^1.89.1"
     },
     "categories": [
         "Other"
@@ -53,13 +54,34 @@
         }
     },
     "scripts": {
-        "compile": "tsc -p .",
-        "watch": "tsc -watch -p ."
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./ && webpack",
+        "build": "webpack"
     },
     "devDependencies": {
+        "@types/vscode": "^1.89.0",
+        "ts-loader": "^9.0.0",
         "typescript": "^4.0.0",
-        "vscode": "^1.66.0",
-        "cheerio": "^1.0.0-rc.10",
-        "axios": "^0.21.1"
-    }
+        "webpack": "^5.0.0",
+        "webpack-cli": "^4.0.0"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cheerio": "^1.0.0-rc.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fdciabdul/Quran-Player.git"
+    },
+    "keywords": [
+        "quran",
+        "player",
+        "vscode"
+    ],
+    "author": "fdciabdul",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fdciabdul/Quran-Player/issues"
+    },
+    "homepage": "https://github.com/fdciabdul/Quran-Player#readme"
 }

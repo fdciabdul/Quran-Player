@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import axios, { AxiosResponse } from 'axios';
 import * as cheerio from 'cheerio';
-import { MusicPlayer } from './quranPlayer'; 
+import { MusicPlayer } from './quranPlayer';
 
 export type SurahRecord = {
     id: string;
