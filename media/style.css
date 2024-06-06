@@ -1,0 +1,60 @@
+body {
+    font-family: 'Amiri', serif;
+    padding: 20px;
+    background-color: #1c1c1c; 
+    color: #e0e0e0; 
+}
+
+#player-container {
+    border: 2px solid #e0e0e0; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    text-indent: 10px;
+}
+
+#control {
+    margin-top: 20px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%); 
+}
+
+#quranListTable {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid #e0e0e0; 
+}
+
+#quranListTable td, #quranListTable th {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+#quranListTable tr:hover {
+    background-color: #095f1c;
+    font-size: medium;
+}
+
+h4 {
+    color: #e0e0e0; 
+    font-family: 'Amiri', serif; 
+}
+
+audio::-webkit-media-controls {
+    display: none;
+}
+
+

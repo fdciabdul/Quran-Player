@@ -1,0 +1,65 @@
+{
+    "name": "quran-recitation",
+    "displayName": "Quran Recitation Player",
+    "description": "Play Quran recitations in VS Code",
+    "version": "0.0.1",
+    "publisher": "fdciabdul",
+    "engines": {
+        "vscode": "^1.66.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onView:quranRecitations"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "quran-recitation",
+                    "title": "Quran Recitation",
+                    "icon": "media/icon.png"
+                }
+            ]
+        },
+        "views": {
+            "quran-recitation": [
+                {
+                    "id": "quranRecitations",
+                    "name": "Quran Player"
+                },
+                {
+                    "type": "webview",
+                    "id": "quran-recitation.musicPlayer",
+                    "name": "Quran Player"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "quran-recitation.playRecitation",
+                "title": "Play Recitation"
+            }
+        ],
+        "menus": {
+            "view/item/context": [
+                {
+                    "command": "quran-recitation.playRecitation",
+                    "when": "view == quranRecitations && viewItem == recitation"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "compile": "tsc -p .",
+        "watch": "tsc -watch -p ."
+    },
+    "devDependencies": {
+        "typescript": "^4.0.0",
+        "vscode": "^1.66.0",
+        "cheerio": "^1.0.0-rc.10",
+        "axios": "^0.21.1"
+    }
+}
